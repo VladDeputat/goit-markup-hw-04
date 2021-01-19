@@ -49,11 +49,11 @@ body {
   padding-bottom: 94px;
 }
 
-section,
+/* section,
 container,
 div {
   outline: solid 1px tomato;
-}
+} */
 
 /*---- removing decor ---*/
 li {
@@ -160,6 +160,11 @@ button {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  fill: #757575;
+}
+
+.header .icon {
+  margin-right: 10px;
 }
 
 .header-contact:hover,
@@ -167,6 +172,7 @@ button {
 .header-contact:focus,
 .nav-link:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* --------hero------- */
@@ -292,38 +298,33 @@ button {
 
 .strength-list .item {
   margin-left: 30px;
+  width: calc(100% / 4 - 30px);
 }
 
-.strength-list .item::before {
-  outline: solid 1px tomato;
+.strength .item::before {
   display: block;
   content: '';
   height: 120px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: #f5f4fa;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 4px;
 }
 
-.antenna::before {
+.strength .antenna::before {
   background-image: url(../img/antenna.svg);
 }
 
-.clock::before {
+.strength .clock::before {
   background-image: url(../img/clock.svg);
 }
 
-.diagram::before {
+.strength .diagram::before {
   background-image: url(../img/diagram.svg);
 }
 
-.astronaut::before {
+.strength .astronaut::before {
   background-image: url(../img/astronaut.svg);
-}
-
-.strength-list .item {
-  flex-basis: calc(100% / 4 - 30px);
 }
 
 /*---- businesses-section----- */
@@ -390,17 +391,27 @@ button {
 .link-list {
   display: flex;
   justify-content: center;
+  margin-left: -10px;
 }
 
-.link-list .item {
-  display: inline-block;
+.link-list .link-item {
+  margin-left: 10px;
+}
+
+.link-list .link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 44px;
   width: 44px;
-  margin-left: 10px;
-  background-repeat: no-repeat;
-  background-position: center;
-  /* border-radius: 50%; */
-  outline: solid 1px tomato;
+  border-radius: 50%;
+  fill: #afb1b8;
+}
+
+.link-list .link-icon:hover,
+.link-list .link-icon:focus {
+  background-color: var(--accent-color);
+  fill: #ffffff;
 }
 
 /* ------------client-section--------- */
@@ -412,15 +423,29 @@ button {
 
 .client-list .item {
   margin-left: 30px;
-  background-color: #f5f4fa;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  height: 70px;
   width: calc(100% / 6 - 30px);
 }
 
-.client-list .item:hover {
-  background-color: tomato;
+.client .icon {
+  fill: #afb1b8;
+}
+
+.client-link {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.client-link:hover .icon {
+  fill: var(--accent-color);
+}
+
+.client-link:hover {
+  border-color: var(--accent-color);
 }
 
 /* -------portfolio-section---------- */
@@ -480,7 +505,7 @@ button {
   margin-top: 20px;
 }
 
-.footer .item + .item {
+.info .item + .item {
   margin-top: 9px;
 }
 
@@ -509,14 +534,39 @@ button {
   color: var(--accent-color);
 }
 
-.footer .footer-list {
-  margin-left: 70px;
-}
-
-.footer .heading {
+.heading-joinus {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-list {
+  margin-left: 70px;
+  margin-top: 12px;
+}
+
+.footer-links-list {
+  display: flex;
+}
+
+.footer-links-icon {
+  display: flex;
+  height: 44px;
+  width: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: #ffffff;
+}
+
+.footer-links-list-item + .footer-links-list-item {
+  margin-left: 10px;
+}
+
+.footer-links-icon:hover {
+  background-color: var(--accent-color);
 }
