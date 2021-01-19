@@ -259,10 +259,6 @@ button {
   margin-left: 8px;
 }
 
-.project-list .item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 /* --strength-section-- */
 
 .heading {
@@ -271,7 +267,7 @@ button {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .strength .name {
@@ -431,7 +427,7 @@ button {
 }
 
 .client-link {
-  height: 70px;
+  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -483,6 +479,13 @@ button {
 .project-list .item-name {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+}
+
+.project-list .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.project-list .item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* ---footer--- */
@@ -569,6 +572,7 @@ button {
   margin-left: 10px;
 }
 
-.footer-links-icon:hover {
+.footer-links-icon:hover,
+.footer-links-icon:focus {
   background-color: var(--accent-color);
 }
