@@ -440,11 +440,13 @@ button {
   border-radius: 4px;
 }
 
-.client-link:hover .icon {
+.client-link:hover .icon,
+.client-link:focus .icon {
   fill: var(--accent-color);
 }
 
-.client-link:hover {
+.client-link:hover,
+.client-link:focus {
   border-color: var(--accent-color);
 }
 
